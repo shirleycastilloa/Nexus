@@ -500,6 +500,13 @@
     .founder-avatar {
       aspect-ratio: 1; background: var(--navy-light);
       display: grid; place-items: center; font-size: 4rem;
+      position: relative; overflow: hidden;
+    }
+    .founder-avatar img.flag {
+      width: 72px; height: 72px; object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid rgba(201,165,53,.4);
+      box-shadow: 0 0 0 4px rgba(201,165,53,.1);
     }
     .founder-body { padding: 1.5rem; }
     .founder-body h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--white); }
@@ -666,8 +673,14 @@
 <!-- ═══════════ ZAP ═══════════ -->
 <section id="zap" class="section-pad">
   <div class="container">
+
+    <!-- Título único de sección -->
+    <div class="reveal" style="text-align:center;margin-bottom:2.5rem">
+      <div class="zap-badge" style="display:inline-block">Metodologías Exclusivas</div>
+      <h2 class="section-title" style="text-align:center;margin-top:1rem">Nuestras <em>Estrategias Propias</em></h2>
+    </div>
+
     <div class="zap-card reveal">
-      <div class="zap-badge">Metodología Exclusiva</div>
       <h2 class="zap-title">Estrategia ZAP<br/><span style="color:var(--gold);font-size:.6em;letter-spacing:.15em;font-family:'Montserrat',sans-serif;font-weight:500">Zona de Alta Probabilidad</span></h2>
       <p class="section-body" style="max-width:680px">ZAP es el desarrollo propio y exclusivo de Nexus Trading Group. Una metodología estratégica creada por nuestro equipo para identificar con alta precisión los puntos óptimos de entrada y salida en el mercado. No es una señal genérica: es el resultado de años de operativa real y análisis profundo del comportamiento del precio.</p>
       <div class="zap-pills">
@@ -678,6 +691,21 @@
         <div class="zap-pill">Enseñada en la Academia</div>
       </div>
     </div>
+
+    <div style="height:1.5rem"></div>
+
+    <div class="zap-card reveal" style="transition-delay:.15s">
+      <h2 class="zap-title">Estrategia Nex-US30<br/><span style="color:var(--gold);font-size:.6em;letter-spacing:.15em;font-family:'Montserrat',sans-serif;font-weight:500">Backtesting Comprobado sobre el Dow Jones</span></h2>
+      <p class="section-body" style="max-width:680px">Los traders de Nexus Trading Group han analizado a fondo el comportamiento del US30 (Dow Jones Industrial Average) y han realizado un backtesting comprobado para desarrollar una estrategia única, propia y con alta efectividad ganadora sobre este activo. Una ventaja competitiva exclusiva de Nexus, fruto del trabajo riguroso y la experiencia real en los mercados.</p>
+      <div class="zap-pills">
+        <div class="zap-pill">Backtesting comprobado</div>
+        <div class="zap-pill">Desarrollo propio</div>
+        <div class="zap-pill">Alta efectividad</div>
+        <div class="zap-pill">US30 · Dow Jones</div>
+        <div class="zap-pill">Exclusiva Nexus</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -811,8 +839,8 @@
         <h2 class="section-title"><em>Nexus Live</em><br/>Trading</h2>
         <p class="section-body">No es un servicio de señales. Es trading en vivo. Te conectas diariamente con traders experimentados para analizar y ejecutar operaciones en los activos más rentables del mercado.</p>
         <div class="assets-row">
-          <div class="asset-chip"><small>Activo 1</small>ORO<small>XAUUSD</small></div>
-          <div class="asset-chip"><small>Activo 2</small>US30<small>Dow Jones</small></div>
+          <div class="asset-chip">ORO<small>XAUUSD</small></div>
+          <div class="asset-chip">US30<small>Dow Jones</small></div>
         </div>
         <ul class="benefits-list">
           <li><span class="check">✦</span><span><strong style="color:var(--white)">Operativa en Vivo:</strong> Observa la pantalla del trader y comprende el "por qué" de cada entrada en tiempo real.</span></li>
@@ -1009,7 +1037,9 @@
     </div>
     <div class="founders-grid">
       <div class="founder-card reveal">
-        <div class="founder-avatar">👤</div>
+        <div class="founder-avatar">
+          <img class="flag" src="https://flagcdn.com/w80/ec.png" alt="Ecuador" />
+        </div>
         <div class="founder-body">
           <h4>James Trader</h4>
           <span>Co-Founder & Head Trader</span>
@@ -1017,7 +1047,9 @@
         </div>
       </div>
       <div class="founder-card reveal" style="transition-delay:.1s">
-        <div class="founder-avatar">👤</div>
+        <div class="founder-avatar">
+          <img class="flag" src="https://flagcdn.com/w80/co.png" alt="Colombia" />
+        </div>
         <div class="founder-body">
           <h4>Fernanda Quirama</h4>
           <span>Co-Founder & Lead Educator</span>
@@ -1025,10 +1057,12 @@
         </div>
       </div>
       <div class="founder-card reveal" style="transition-delay:.2s">
-        <div class="founder-avatar">👤</div>
+        <div class="founder-avatar">
+          <img class="flag" src="https://flagcdn.com/w80/ec.png" alt="Ecuador" />
+        </div>
         <div class="founder-body">
           <h4>José Daniel</h4>
-          <span>Co-Founder & Graphics Expert</span>
+          <span>Co-Founder & Chart Expert</span>
           <p>Experto en gráficas, gestión de riesgo y psicología de los mercados financieros.</p>
         </div>
       </div>
