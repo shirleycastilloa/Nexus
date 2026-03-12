@@ -70,10 +70,18 @@
       transition: padding .3s;
     }
     .nav-brand {
+      display: flex; align-items: center;
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.35rem; font-weight: 700; letter-spacing: .12em;
       color: var(--gold); text-transform: uppercase;
     }
+    .nav-brand img {
+      height: 38px; width: auto;
+      object-fit: contain;
+      filter: brightness(1.05) drop-shadow(0 0 6px rgba(201,165,53,.35));
+      transition: filter .3s;
+    }
+    .nav-brand img:hover { filter: brightness(1.15) drop-shadow(0 0 10px rgba(201,165,53,.6)); }
     .nav-brand span { color: var(--white); }
     .nav-links { display: flex; gap: 2.2rem; list-style: none; }
     .nav-links a {
@@ -114,6 +122,13 @@
     .hero-content {
       position: relative; z-index: 1;
       max-width: 820px; text-align: center;
+    }
+    .hero-logo {
+      display: block; margin: 0 auto 2.2rem;
+      width: clamp(140px, 22vw, 220px); height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 24px rgba(201,165,53,.45));
+      animation: fadeUp .7s ease both;
     }
     .hero-kicker {
       display: inline-block; margin-bottom: 1.6rem;
@@ -624,7 +639,9 @@
 
 <!-- ═══════════ NAV ═══════════ -->
 <nav>
-  <a href="#" class="nav-brand">Nexus <span>Trading Group</span></a>
+  <a href="#" class="nav-brand">
+    <img src="assets/images/nexus.webp" alt="Nexus Trading Group" />
+  </a>
   <ul class="nav-links">
     <li><a href="#trading-real">Trading Real</a></li>
     <li><a href="#productos">Productos</a></li>
@@ -640,6 +657,7 @@
   <div class="hero-bg"></div>
   <div class="hero-lines"></div>
   <div class="hero-content">
+    <img class="hero-logo" src="assets/images/nexus.webp" alt="Nexus Trading Group" />
     <div class="hero-kicker">Trading Profesional · Desde 2019</div>
     <h1 class="hero-title">Para formar un <em>trader</em>,<br/>primero formamos una persona</h1>
     <p class="hero-tagline">El conocimiento vence tus miedos y destroza tus límites</p>
@@ -1061,7 +1079,7 @@
         <div class="founder-body">
           <h4>Fernanda Quirama</h4>
           <span>Co-Founder &amp; Lead Educator</span>
-          <p>Especialista en formación y desarrollo de metodologías de trading.</p>
+          <p>Trader especialista en formación y desarrollo de metodologías de trading.</p>
         </div>
       </div>
       <div class="founder-card reveal" style="transition-delay:.2s">
@@ -1072,7 +1090,7 @@
         <div class="founder-body">
           <h4>José Daniel Larrea</h4>
           <span>Co-Founder &amp; Chart Expert</span>
-          <p>Experto en gráficas, gestión de riesgo y psicología de los mercados financieros.</p>
+          <p>Trader experto en gráficas, gestión de riesgo y psicología de los mercados financieros.</p>
         </div>
       </div>
       <div class="founder-card reveal" style="transition-delay:.3s">
@@ -1082,8 +1100,8 @@
         </div>
         <div class="founder-body">
           <h4>Alejandro Ulate</h4>
-          <span>Director Tecnológico</span>
-          <p>Responsable de la infraestructura tecnológica y las plataformas digitales de Nexus.</p>
+          <span>Co-Founder & Director Tecnológico</span>
+          <p>Trader y responsable de la infraestructura tecnológica y las plataformas digitales de Nexus.</p>
         </div>
       </div>
     </div>
