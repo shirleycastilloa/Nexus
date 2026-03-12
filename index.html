@@ -490,7 +490,7 @@
 
     /* ── SOBRE NOSOTROS ─────────────────────────────────────── */
     #sobre-nosotros { background: var(--navy-mid); }
-    .founders-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+    .founders-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-top: 3rem; }
     .founder-card {
       border: 1px solid rgba(201,165,53,.15); overflow: hidden;
       background: var(--navy); text-align: center;
@@ -502,11 +502,16 @@
       display: grid; place-items: center; font-size: 4rem;
       position: relative; overflow: hidden;
     }
+    .founder-avatar img.photo {
+      width: 100%; height: 100%; object-fit: cover; object-position: top center;
+      display: block;
+    }
     .founder-avatar img.flag {
-      width: 72px; height: 72px; object-fit: cover;
+      position: absolute; bottom: 10px; right: 10px;
+      width: 36px; height: 36px; object-fit: cover;
       border-radius: 50%;
-      border: 2px solid rgba(201,165,53,.4);
-      box-shadow: 0 0 0 4px rgba(201,165,53,.1);
+      border: 2px solid rgba(201,165,53,.6);
+      box-shadow: 0 2px 8px rgba(0,0,0,.4);
     }
     .founder-body { padding: 1.5rem; }
     .founder-body h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--white); }
@@ -598,7 +603,8 @@
       .nav-links { display: none; }
       .trading-grid, .live-grid, .academia-grid, .estafas-inner,
       .contact-grid, .mv-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .op-grid, .products-grid, .founders-grid { grid-template-columns: 1fr 1fr; }
+      .op-grid, .products-grid { grid-template-columns: 1fr 1fr; }
+      .founders-grid { grid-template-columns: 1fr 1fr; }
       .valores-grid { grid-template-columns: 1fr 1fr; }
       .reasons-grid { grid-template-columns: 1fr; }
       .notify-row { grid-template-columns: 1fr; }
@@ -1038,32 +1044,46 @@
     <div class="founders-grid">
       <div class="founder-card reveal">
         <div class="founder-avatar">
+          <img class="photo" src="assets/images/james.webp" alt="James Solís" />
           <img class="flag" src="https://flagcdn.com/w80/ec.png" alt="Ecuador" />
         </div>
         <div class="founder-body">
-          <h4>James Trader</h4>
-          <span>Co-Founder & Head Trader</span>
+          <h4>James Solís</h4>
+          <span>Co-Founder &amp; Head Trader</span>
           <p>Trader con años de experiencia en mercados del Oro y materias primas.</p>
         </div>
       </div>
       <div class="founder-card reveal" style="transition-delay:.1s">
         <div class="founder-avatar">
+          <img class="photo" src="assets/images/fer.webp" alt="Fernanda Quirama" />
           <img class="flag" src="https://flagcdn.com/w80/co.png" alt="Colombia" />
         </div>
         <div class="founder-body">
           <h4>Fernanda Quirama</h4>
-          <span>Co-Founder & Lead Educator</span>
+          <span>Co-Founder &amp; Lead Educator</span>
           <p>Especialista en formación y desarrollo de metodologías de trading.</p>
         </div>
       </div>
       <div class="founder-card reveal" style="transition-delay:.2s">
         <div class="founder-avatar">
+          <img class="photo" src="assets/images/jose.webp" alt="José Daniel Larrea" />
           <img class="flag" src="https://flagcdn.com/w80/ec.png" alt="Ecuador" />
         </div>
         <div class="founder-body">
-          <h4>José Daniel</h4>
-          <span>Co-Founder & Chart Expert</span>
+          <h4>José Daniel Larrea</h4>
+          <span>Co-Founder &amp; Chart Expert</span>
           <p>Experto en gráficas, gestión de riesgo y psicología de los mercados financieros.</p>
+        </div>
+      </div>
+      <div class="founder-card reveal" style="transition-delay:.3s">
+        <div class="founder-avatar">
+          <img class="photo" src="assets/images/ale.webp" alt="Alejandro Ulate" />
+          <img class="flag" src="https://flagcdn.com/w80/cr.png" alt="Costa Rica" />
+        </div>
+        <div class="founder-body">
+          <h4>Alejandro Ulate</h4>
+          <span>Director Tecnológico</span>
+          <p>Responsable de la infraestructura tecnológica y las plataformas digitales de Nexus.</p>
         </div>
       </div>
     </div>
