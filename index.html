@@ -228,6 +228,45 @@
       margin-left: 4px;
     }
 
+    /* ── YOUTUBE FACADE ─────────────────────────────────────── */
+    .yt-facade {
+      aspect-ratio: 16/9; position: relative; overflow: hidden;
+      cursor: pointer; display: block;
+      border: 1px solid rgba(201,165,53,.25);
+      background: #000;
+    }
+    .yt-facade img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+      transition: transform .4s ease, filter .4s ease;
+      filter: brightness(.82);
+    }
+    .yt-facade:hover img { transform: scale(1.03); filter: brightness(.6); }
+    .yt-facade .yt-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(13,27,62,.72) 0%, transparent 55%);
+    }
+    .yt-facade .yt-play {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px; height: 72px; border-radius: 50%;
+      background: rgba(201,165,53,.92);
+      display: grid; place-items: center;
+      transition: background .25s, transform .25s;
+      box-shadow: 0 4px 24px rgba(0,0,0,.5);
+    }
+    .yt-facade:hover .yt-play { background: var(--gold); transform: translate(-50%, -50%) scale(1.1); }
+    .yt-facade .yt-play svg { width: 28px; height: 28px; fill: #0D1B3E; margin-left: 4px; }
+    .yt-facade .yt-label {
+      position: absolute; bottom: 1rem; left: 1.2rem;
+      font-size: .65rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: rgba(240,237,228,.7);
+    }
+    .yt-facade iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; border: none;
+    }
+
     /* ── ZAP ────────────────────────────────────────────────── */
     #zap { background: var(--navy); }
     .zap-card {
@@ -673,9 +712,13 @@
         <a href="#productos" class="btn-primary" style="display:inline-block;margin-top:2rem">Comenzar ahora</a>
       </div>
       <div class="reveal" style="transition-delay:.15s">
-        <div class="video-placeholder">
-          <div class="play-btn"><div class="play-icon"></div></div>
-          <p style="position:absolute;bottom:1.2rem;left:1.2rem;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)">Video — Introducción al Trading Real</p>
+        <div class="yt-facade" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/8MVesAwQ2?autoplay=1&rel=0\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+          <img src="https://i.ytimg.com/vi/8MVesAwQ2/maxresdefault.jpg" alt="Introducción al Trading Real" loading="lazy" />
+          <div class="yt-overlay"></div>
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <span class="yt-label">Video — Introducción al Trading Real</span>
         </div>
       </div>
     </div>
@@ -734,7 +777,7 @@
       <div class="op-card reveal">
         <span class="op-icon">📊</span>
         <h3>Tipo de Trading</h3>
-        <p>Trading discrecional intradía y swing, basado en análisis técnico avanzado con la metodología ZAP como núcleo estratégico de todas las operaciones.</p>
+        <p>Trading scalping discrecional en Nexus Trading Live e intradía y swing en la Academia, basado en análisis técnico avanzado con la metodología ZAP como núcleo estratégico de todas las operaciones.</p>
       </div>
       <div class="op-card reveal" style="transition-delay:.1s">
         <span class="op-icon">🌍</span>
