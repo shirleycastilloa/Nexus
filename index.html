@@ -70,18 +70,10 @@
       transition: padding .3s;
     }
     .nav-brand {
-      display: flex; align-items: center;
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.35rem; font-weight: 700; letter-spacing: .12em;
       color: var(--gold); text-transform: uppercase;
     }
-    .nav-brand img {
-      height: 38px; width: auto;
-      object-fit: contain;
-      filter: brightness(1.05) drop-shadow(0 0 6px rgba(201,165,53,.35));
-      transition: filter .3s;
-    }
-    .nav-brand img:hover { filter: brightness(1.15) drop-shadow(0 0 10px rgba(201,165,53,.6)); }
     .nav-brand span { color: var(--white); }
     .nav-links { display: flex; gap: 2.2rem; list-style: none; }
     .nav-links a {
@@ -639,9 +631,7 @@
 
 <!-- ═══════════ NAV ═══════════ -->
 <nav>
-  <a href="#" class="nav-brand">
-    <img src="assets/images/nexus.webp" alt="Nexus Trading Group" />
-  </a>
+  <a href="#" class="nav-brand">Nexus <span>Trading Group</span></a>
   <ul class="nav-links">
     <li><a href="#trading-real">Trading Real</a></li>
     <li><a href="#productos">Productos</a></li>
